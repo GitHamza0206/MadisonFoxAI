@@ -9,7 +9,7 @@ import json
 def create_crewai_setup(business_presentation,OUTPUT_FOLDER):
 
     #OUTPUT_FOLDER = "Out10/"
-    CSV_PROMPTS="prompts.csv"
+    CSV_PROMPTS="data/processed/prompts.csv"
     PILLARS = ['Finance', 'Infrastructure', 'Management', 'Marketing']
 
     HUMAN_INPUT=False 
