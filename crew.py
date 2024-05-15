@@ -6,9 +6,10 @@ import pandas as pd
 import json
 from langchain_groq import ChatGroq
 
+os.environ['OPENAI_API_KEY']=st.secrets['OPENAI_API_KEY']
 os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
 
-llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")
+#llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")
 
 def create_crewai_setup(business_presentation,OUTPUT_FOLDER):
 
@@ -71,7 +72,7 @@ def create_crewai_setup(business_presentation,OUTPUT_FOLDER):
         goal=dedent(f"""Help businesses launching and growing by providing a comprehensive business development plan """),
         allow_delegation=False,
         verbose=True,
-        llm = llm 
+        
 
         
     )
