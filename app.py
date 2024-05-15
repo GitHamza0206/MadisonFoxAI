@@ -9,6 +9,9 @@ from crew import create_crewai_setup
 import sys 
 
 os.environ['OPENAI_API_KEY']=st.secrets['OPENAI_API_KEY']
+os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']
+
+
 
 OUTPUT_FOLDER = "Out/"
 

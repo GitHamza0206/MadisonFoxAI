@@ -11,3 +11,4 @@ chromadb
 tiktoken
 faiss-cpu
 pysqlite3-binary
+langchai_groq
