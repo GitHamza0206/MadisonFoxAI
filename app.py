@@ -3,7 +3,7 @@ import streamlit as st
 from textwrap import dedent
 import pandas as pd 
 import json
-
+import re 
 from crewai import Agent, Task, Crew, Process
 from crew import create_crewai_setup
 import sys 
@@ -42,7 +42,7 @@ def run_crewai_app():
         st.session_state['folder'] = "Out10/"
 
     if "prompts" not in st.session_state.keys():
-        st.session_state['prompts'] = "prompts.csv"
+        st.session_state['prompts'] = "data/processed/prompts.csv"
 
     def on_click_btn(folder_name):
         if not os.path.exists(folder_name):
